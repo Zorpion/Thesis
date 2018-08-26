@@ -1,0 +1,32 @@
+# Plotting
+%matplotlib inline
+from matplotlib.pylab import rcParams
+import matplotlib.pyplot as plt
+
+# ignore warnings in this demo notebook
+import warnings; 
+warnings.simplefilter('ignore')
+
+from datetime import datetime
+import pandas as pd
+import numpy as np
+
+# Normalization
+from sklearn.preprocessing import MinMaxScaler
+
+# Deep Learing
+import keras
+import itertools
+from keras.models import Sequential
+from keras.layers import LSTM, Dropout, Dense
+from keras.utils import to_categorical
+from keras.optimizers import Adam 
+from keras.callbacks import History, TerminateOnNaN, ReduceLROnPlateau, EarlyStopping
+from keras.utils import np_utils
+from keras import backend as K
+
+# Custom functions
+from python_code.data_preparation import create_tensors
+from python_code.data_preparation import load_series
+
+rcParams['figure.figsize'] = 15, 6
